@@ -1,6 +1,5 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
-
 export default function Home() {
   return (
     <>
@@ -8,9 +7,11 @@ export default function Home() {
       <Padding />
       <TotalWorkSection />
       <Padding />
+    
     </>
   );
 }
+
 
 export function TotalWorkSection() {
   return (

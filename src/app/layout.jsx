@@ -3,6 +3,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/themeButton";
 import {Navbar} from "@/components/navBar"
 import { Padding } from "./page";
+import { FootMenu } from "@/components/footMenu";
+
 import "./globals.css";
 
 
@@ -33,6 +35,8 @@ export default function RootLayout({ children }) {
           </div>
           <Padding />
           {children}
+          <Padding />
+          <FootMenu/>
         </ThemeProvider>
       </body>
     </html>
