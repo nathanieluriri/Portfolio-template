@@ -10,6 +10,7 @@ function sleep(ms)  {
 export const TransitionLink = ({
   children,
   href,
+  onClicked,
   ...props
 }) => {
   const router = useRouter();
@@ -22,10 +23,13 @@ export const TransitionLink = ({
 
     body?.classList.add("page-transition");
 
-    await sleep(500);
+    await sleep(230);
     router.push(href);
-    await sleep(500);
-
+    await sleep(230);
+    if (onClicked!==undefined){
+        {onClicked();}
+    }
+ 
     body?.classList.remove("page-transition");
   };
 

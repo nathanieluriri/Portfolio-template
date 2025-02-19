@@ -67,13 +67,16 @@
 
 
 body {
+  
   transition-property: opacity, transform, filter;
   transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+  transition-duration: 430ms;
 }
 
 .page-transition {
   opacity: 0;
-  transform: translateY(40px);
-  filter: blur(12px);
+  transform: translate3d(1020px, -900px, 1000px);
+  transform-style: preserve-3d;
+
+  filter: blur(100px);
 }
