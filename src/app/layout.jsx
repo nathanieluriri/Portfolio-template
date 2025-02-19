@@ -116,7 +116,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className=" dark:bg-black  transition-all duration-1000 ">
+      <body className=" dark:bg-black  transition-all duration-1000 grid">
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           <div className="flex mt-2 ml-4">
