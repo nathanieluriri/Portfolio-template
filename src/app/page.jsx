@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <Padding />
       <HeroSection />
+      <Padding />
       <TotalWorkSection/>
       <Padding />
     </>
