@@ -12,13 +12,13 @@ export function FootMenu() {
     <h1 className="md:text-4xl md:w-2/5 text-2xl">
       Seamlessly Integrating User Experiences with Impactful Brand Identity Design.
     </h1>
-    <p>
+    <p className="text-sm">
       Nat@uriri.com.ng
     </p>
-    <p>
+    <p className="text-sm">
       (234) 805 396 48 26
     </p>
-    <p>
+    <p className="text-sm">
       © All rights reserved 2025 Nathaniel Uriri
     </p>
   </div>
@@ -27,14 +27,17 @@ export function FootMenu() {
     <h1 className="transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
       Projects
     </h1>
-    <p>
+    <p className="text-sm">
       Streamz
     </p>
-    <p>
+    <p className="text-sm">
       Cafdash
     </p>
-    <p>
+    <p className="text-sm">
       Class Insight
+    </p>
+    <p className="text-sm">
+      Litebank
     </p>
   </div>
   <hr className="border-black dark:border-white rounded-3xl border-2  md:hidden" />
