@@ -29,8 +29,9 @@ export const TransitionLink = ({
     if (onClicked!==undefined){
         {onClicked();}
     }
- 
+    await sleep(230);
     body?.classList.remove("page-transition");
+    await sleep(10);
   };
 
   return (

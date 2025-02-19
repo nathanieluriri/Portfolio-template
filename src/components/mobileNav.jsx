@@ -17,7 +17,7 @@ export function MobileNavBar(){
     const [open, setOpen] = useState(false);
     return(
         
-      <Sheet open={open} onOpenChange={setOpen} className="bg-black dark:bg-white">
+      <Sheet open={open} onOpenChange={setOpen} className="bg-black dark:bg-white transition-all duration-1000">
       <SheetTrigger className="md:hidden dark:text-white text-black transition-all duration-75">
         <Menu className="w-6 h-6" />
       </SheetTrigger>
