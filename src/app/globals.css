@@ -68,6 +68,7 @@
 
 body {
   overflow-x: hidden;
+  position: relative;
   transition-property: opacity, transform, filter;
   transition-timing-function: ease-in-out;
   transition-duration: 430ms;

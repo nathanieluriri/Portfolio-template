@@ -23,9 +23,9 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded border border-gray-300 dark:border-gray-700 transition-all duration-75"
+      className="fixed z-50 bottom-3 right-10 p-2 rounded border bg-zinc-100 dark:bg-zinc-900 border-gray-300 dark:border-gray-700 "
     >
-      {theme === "dark" ? <Sun className="w-5 h-5 transition-all duration-75" /> : <Moon className="w-5 h-5 transition-all duration-75" />}
+      {theme === "dark" ? <Sun className="w-5 h-5 " /> : <Moon className="w-5 h-5 " />}
     </button>
   );
 }
