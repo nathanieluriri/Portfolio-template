@@ -6,19 +6,22 @@ export default function Home() {
     <>
       <Padding />
       <HeroSection />
-      <Padding />
-      <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center ">
-        <WorkSection/>
-        <WorkSection/>
-        <WorkSection/>
-        <WorkSection/>
-      </div>
+      <TotalWorkSection/>
       <Padding />
     </>
   );
 }
 
-function WorkSection() {
+export function TotalWorkSection() {
+  return <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center ">
+    <WorkSection />
+    <WorkSection />
+    <WorkSection />
+    <WorkSection />
+  </div>;
+}
+
+export function WorkSection() {
   return <div className="w-2/5 min-w-[350px]">
     <div className="flex flex-col justify-center gap-6 p-4 dark:border-slate-800 border-2 rounded">
       <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
