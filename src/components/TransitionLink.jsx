@@ -20,15 +20,15 @@ export const TransitionLink = ({
   ) => {
     e.preventDefault();
     const body = document.querySelector("body");
-
+    if (onClicked!==undefined){
+        {onClicked();}
+    }
     body?.classList.add("page-transition");
 
     await sleep(230);
     router.push(href);
     await sleep(230);
-    if (onClicked!==undefined){
-        {onClicked();}
-    }
+
     await sleep(230);
     body?.classList.remove("page-transition");
     await sleep(10);

@@ -4,12 +4,40 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function Home() {
   return (
     <>
-      <Padding/>
-      <HeroSection/>
-      <Padding/>
-      <div className="flex md:flex-wrap flex-col justify-center justify-self-center w-full h-full">
-      <div className="flex flex-col w-1/4 h-2/3 outline-dotted"> </div>
+      <Padding />
+      <HeroSection />
+      <Padding />
+      <div className="w-4/5  flex flex-wrap gap-8 justify-center justify-self-center ">
+        <div className="w-2/5 min-w-[350px]">
+          <div className="flex flex-col justify-center gap-6 p-4 dark:border-slate-800 border-2 rounded">
+            <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+            <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+            <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+          </div>
+        </div>
+        <div className="w-2/5 min-w-[350px]">
+          <div className="flex flex-col justify-center gap-6 p-4 dark:border-slate-800 border-2 rounded">
+            <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+            <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+            <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+          </div>
+        </div>
+        <div className="w-2/5 min-w-[350px]">
+          <div className="flex flex-col justify-center gap-6 p-4 dark:border-slate-800 border-2 rounded">
+            <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+            <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+            <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+          </div>
+        </div>
+        <div className="w-2/5 min-w-[350px]">
+          <div className="flex flex-col justify-center gap-6 p-4 dark:border-slate-800 border-2 rounded">
+            <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+            <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+            <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+          </div>
+        </div>
       </div>
+      <Padding />
     </>
   );
 }
