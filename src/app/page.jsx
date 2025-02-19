@@ -33,7 +33,7 @@ export function WorkSection() {
 
 export function HeroSection() {
   return (
-    <div className=" flex  transition-all duration-1000 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-screen lg:flex-row flex-col gap-11 justify-start">
+    <div className=" flex  transition-all duration-1000 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:min-h-screen lg:flex-row flex-col gap-11 justify-start">
       <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[350px] md:w-full md:h-[500px] rounded dark:bg-zinc-900" />
       <div className="flex gap-y-3 transition-all duration-1000 flex-col justify-start">
         <Skeleton className="w-[200px] transition-all duration-1000 lg:w-[500px] dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />
