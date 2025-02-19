@@ -14,7 +14,7 @@ export default function Home() {
 }
 
 export function TotalWorkSection() {
-  return <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center p-4 ">
+  return <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center m-4 ">
     <WorkSection />
     <WorkSection />
     <WorkSection />
