@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/themeButton";
+import { TransitionLink } from "@/components/TransitionLink";
 import Link from "next/link";
 
 import { Menu } from "lucide-react";
@@ -20,39 +21,40 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-between p-4 border-b transition-all duration-75">
       {/* Left: Logo */}
-      <Link
+      <TransitionLink
         href="/"
         className="text-xl font-bold dark:text-white text-black transition-all duration-75"
       >
         Nathy
-      </Link>
+      </TransitionLink>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex gap-8">
-        <Link
+        <TransitionLink
           href="/"
           className="hover:underline transition-all duration-75 dark:text-white"
         >
           Home
-        </Link>
-        <Link
+        </TransitionLink>
+
+        <TransitionLink
           href="/about"
           className="hover:underline transition-all duration-75 dark:text-white"
         >
           About
-        </Link>
-        <Link
+        </TransitionLink>
+        <TransitionLink
           href="/all-work"
           className="hover:underline transition-all duration-75 dark:text-white"
         >
           All Works
-        </Link>
-        <Link
+        </TransitionLink>
+        <TransitionLink
           href="/contact"
           className="hover:underline transition-all duration-75 dark:text-white"
         >
           Contact
-        </Link>
+        </TransitionLink>
       </div>
 
       {/* Mobile Menu */}
@@ -70,26 +72,26 @@ function Navbar() {
           </SheetHeader>
           <div className="flex flex-col gap-8 dark:bg-black">
             <SheetClose asChild className="dark:bg-black dark:text-white">
-              <Link href="/" className="hover:underline">
+              <TransitionLink href="/" className="hover:underline">
                 Home
-              </Link>
+              </TransitionLink>
             </SheetClose>
 
             <SheetClose asChild className="dark:bg-black dark:text-white">
-              <Link href="/about" className="hover:underline">
+              <TransitionLink href="/about" className="hover:underline">
                 About
-              </Link>
+              </TransitionLink>
             </SheetClose>
             <SheetClose asChild className="dark:bg-black dark:text-white">
-              <Link href="/all-work" className="hover:underline">
+              <TransitionLink href="/all-work" className="hover:underline">
                 All Work
-              </Link>
+              </TransitionLink>
             </SheetClose>
 
             <SheetClose asChild className="dark:bg-black dark:text-white">
-              <Link href="/contact" className="hover:underline">
+              <TransitionLink href="/contact" className="hover:underline">
                 Contact
-              </Link>
+              </TransitionLink>
             </SheetClose>
           </div>
         </SheetContent>
