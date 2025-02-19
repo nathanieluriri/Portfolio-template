@@ -7,7 +7,7 @@ export default function Home() {
       <Padding />
       <HeroSection />
       <Padding />
-      <div className="w-4/5  flex flex-wrap gap-8 justify-between justify-self-center ">
+      <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center ">
         <WorkSection/>
         <WorkSection/>
         <WorkSection/>
