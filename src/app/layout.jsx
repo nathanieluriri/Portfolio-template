@@ -1,58 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/themeButton";
-import { TransitionLink } from "@/components/TransitionLink";
-import {MobileNavBar} from "@/components/mobileNav"
-
-
+import {Navbar} from "@/components/navBar"
 import { Padding } from "./page";
+import "./globals.css";
 
-function Navbar() {
-  return (
-    <nav className="flex items-center justify-between p-4 border-b transition-all duration-75">
-      {/* Left: Logo */}
-      <TransitionLink
-        href="/"
-        className="text-xl font-bold dark:text-white text-black transition-all duration-75"
-      >
-        Nathy
-      </TransitionLink>
-
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-8">
-        <TransitionLink
-          href="/"
-          className="hover:underline transition-all duration-75 dark:text-white"
-        >
-          Home
-        </TransitionLink>
-
-        <TransitionLink
-          href="/about"
-          className="hover:underline transition-all duration-75 dark:text-white"
-        >
-          About
-        </TransitionLink>
-        <TransitionLink
-          href="/all-work"
-          className="hover:underline transition-all duration-75 dark:text-white"
-        >
-          All Works
-        </TransitionLink>
-        <TransitionLink
-          href="/contact"
-          className="hover:underline transition-all duration-75 dark:text-white"
-        >
-          Contact
-        </TransitionLink>
-      </div>
-
-      {/* Mobile Menu */}
-      <MobileNavBar/>
-    </nav>
-  );
-}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,6 +20,7 @@ export const metadata = {
   title: "First App",
   description: "Nat Edited",
 };
+
 
 export default function RootLayout({ children }) {
   return (
