@@ -29,7 +29,6 @@ export const TransitionLink = ({
     router.push(href);
     await sleep(230);
 
-    await sleep(230);
     body?.classList.remove("page-transition");
     await sleep(10);
   };
