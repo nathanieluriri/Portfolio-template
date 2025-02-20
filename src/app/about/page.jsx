@@ -52,7 +52,7 @@ export function OfferCarousel() {
       opts={{
         align: "start",
       }}
-      className="md:w-full md:max-w-fit p-3 overflow-x-hidden "
+      className="w-[300px] md:w-full md:max-w-fit p-3 overflow-x-hidden "
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
@@ -60,8 +60,8 @@ export function OfferCarousel() {
             <Card>
               <CardContent className="pr-4 flex items-start justify-start flex-col pt-2 min-h-[300px] gap-2 ">
                 {icons[index]}
-                <h1 className=" text-3xl text-start">{titles[index]}</h1>
-                <h1 className="max-w-[250px]  text-start text-sm">
+                <h1 className="text-xl md:text-3xl text-start">{titles[index]}</h1>
+                <h1 className="md:max-w-[250px] max-w-[150px]  text-start text-sm">
                   {contents}
                 </h1>
               </CardContent>
