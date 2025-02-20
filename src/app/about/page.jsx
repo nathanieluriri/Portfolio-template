@@ -29,8 +29,9 @@ export function DropDownAbout() {
   return (
 
     <>
-    <div>
+    <div className="flex flex-col gap-5 justify-center justify-self-center">
       <p className="transition-all duration-100 text-lg font-bold px-1.5">About Me</p>
+      
       <h1 className="transition-all duration-100 bg-slate-100 text-black text-4xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-slate-900 dark:text-white w-fit">Evolving to create impactful experiences</h1>
     <Accordion type="multiple" collapsible className="md:w-4/5 w-full">
       <AccordionItem value="item-1">
