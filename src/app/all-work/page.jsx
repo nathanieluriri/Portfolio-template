@@ -1,9 +1,14 @@
-import { HeroSection } from "../page"
+import { TotalWorkSection } from "../page"
+import { Padding } from "@/components/padding"
 export default function Page(){
     return(
        <>
-       <HeroSection/>
-       <h1 className="dark:text-white"> Hello from All work</h1>
+       <TotalWorkSection/>
+       <Padding/>
+       <TotalWorkSection/>
+       <Padding/>
+       <TotalWorkSection/>
+       <Padding/>
        </>
         
     )
