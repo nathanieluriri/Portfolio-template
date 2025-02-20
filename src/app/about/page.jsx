@@ -29,7 +29,7 @@ export function DropDownAbout() {
   return (
 
     <>
-    <div className="flex flex-col gap-5 justify-center justify-self-center">
+    <div className="flex flex-col gap-5 justify-center justify-self-center h-screen">
       <p className="transition-all duration-100 text-lg font-bold px-1.5">About Me</p>
       
       <h1 className="transition-all duration-100 bg-slate-100 text-black text-4xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-slate-900 dark:text-white w-fit">Evolving to create impactful experiences</h1>
@@ -89,8 +89,7 @@ export default function About() {
 
 function AboutMeSection() {
   return <div className="flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
-    <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-[300px] rounded" />
-    <Padding/>
+    <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" />
     <DropDownAbout />
     <Padding/>
   </div>;
@@ -98,10 +97,10 @@ function AboutMeSection() {
 
 function WhatCanIOfferSection() {
   return (
-    <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col">
+    <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col h-screen">
       <Padding/>
       
-      <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
+      <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-red-50 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-red-950 dark:text-white w-fit">
         WHAT I CAN OFFER
       </h1>
       <OfferCarousel />

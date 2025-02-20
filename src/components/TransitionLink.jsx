@@ -25,12 +25,14 @@ export const TransitionLink = ({
     }
     body?.classList.add("page-transition");
 
-    await sleep(230);
-    router.push(href);
-    await sleep(230);
-
+    await sleep(430);
     body?.classList.remove("page-transition");
-    await sleep(10);
+    await sleep(0);
+    router.push(href);
+    await sleep(500);
+
+
+   
   };
 
   return (
