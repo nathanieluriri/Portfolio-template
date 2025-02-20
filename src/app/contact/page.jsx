@@ -10,7 +10,10 @@ export default function Page() {
       <div className="md:w-full md:flex md:flex-row-reverse justify-center justify-self-center ">
         <Skeleton className="md:w-3/6 transition-all duration-1000 dark:bg-zinc-900  md:h-full rounded  md:mr-11" />
         <div className=" md:flex flex-col md:w-3/6 pl-5 ">
-          <div className="md:flex md:flex-col md:w-full">
+          <div
+            
+            className="flex flex-col md:w-full justify-center justify-self-center  self-center  items-center"
+          >
             <div className="flex flex-col w-4/5 justify-center justify-self-center gap-2">
               <h1 className=" transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
                 Do you like coffee?
