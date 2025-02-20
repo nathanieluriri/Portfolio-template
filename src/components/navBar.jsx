@@ -3,7 +3,7 @@ import {MobileNavBar} from "@/components/mobileNav"
 import {DesktopNav} from "@/components/desktopNav"
 export function Navbar() {
   return (
-    <nav className="flex items-center justify-between p-4 border-b transition-all duration-75">
+    <nav className=" sticky top-0 bg-white dark:bg-black z-50 flex items-center justify-between p-4 border-b transition-all duration-75">
       {/* Left: Logo */}
       <TransitionLink
         href="/"
