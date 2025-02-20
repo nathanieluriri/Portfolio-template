@@ -36,7 +36,7 @@ const contents =
 export default function About() {
   return (
     <>
-      <div className="flex w-fit max-w-[1000px]   justify-center justify-self-center flex-col">
+      <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col">
         <h1 className="transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
           WHAT I CAN OFFER
         </h1>
@@ -52,11 +52,11 @@ export function OfferCarousel() {
       opts={{
         align: "start",
       }}
-      className="w-full max-w-fit p-3 "
+      className="md:w-full md:max-w-fit p-3 overflow-x-hidden "
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className=" md:basis-2/6 basis-2/6 ">
+          <CarouselItem key={index} className=" md:basis-2/6 basis-[100%] w-[100px] md:w-full">
             <Card>
               <CardContent className="pr-4 flex items-start justify-start flex-col pt-2 min-h-[300px] gap-2 ">
                 {icons[index]}
