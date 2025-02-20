@@ -14,7 +14,60 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Padding } from "../page";
+
+export default function About() {
+  return (
+    <>
+      <WhatCanIOfferSection />
+    </>
+  );
+}
+
+function WhatCanIOfferSection() {
+  return (
+    <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col">
+      <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
+        WHAT I CAN OFFER
+      </h1>
+      <OfferCarousel />
+    </div>
+  );
+}
+
+export function OfferCarousel() {
+  return (
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="w-[250px] md:w-full md:max-w-fit p-3"
+    >
+      <CarouselContent>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem
+            key={index}
+            className=" md:basis-2/6 basis-[100%] w-[100px] md:w-full"
+          >
+            <Card>
+              <CardContent className="pr-4 flex items-center justify-center sm:items-start sm:justify-start flex-col pt-2 min-h-[300px] gap-2 ">
+                {icons[index]}
+                <h1 className="text-xl md:text-3xl text-center sm:text-start">
+                  {titles[index]}
+                </h1>
+                <h1 className="md:max-w-[250px] max-w-[150px]  sm:text-start text-center text-sm">
+                  {contents}
+                </h1>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+}
+
 const icons = [
   <Speech className=" w-[60px] h-[60px]" />,
   <NotebookPen className=" w-[60px] h-[60px]" />,
@@ -33,48 +86,3 @@ const titles = [
 ];
 const contents =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.";
-export default function About() {
-  return (
-    <>
-      <WhatCanIOfferSection/>
-    </>
-  );
-}
-
-function WhatCanIOfferSection() {
-  return <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col">
-    <h1 className="transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
-      WHAT I CAN OFFER
-    </h1>
-    <OfferCarousel />
-  </div>;
-}
-
-export function OfferCarousel() {
-  return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-[250px] md:w-full md:max-w-fit p-3"
-    >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className=" md:basis-2/6 basis-[100%] w-[100px] md:w-full">
-            <Card>
-              <CardContent className="pr-4 flex items-center justify-center sm:items-start sm:justify-start flex-col pt-2 min-h-[300px] gap-2 ">
-                {icons[index]}
-                <h1 className="text-xl md:text-3xl text-center sm:text-start">{titles[index]}</h1>
-                <h1 className="md:max-w-[250px] max-w-[150px]  sm:text-start text-center text-sm">
-                  {contents}
-                </h1>
-              </CardContent>
-            </Card>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  );
-}
