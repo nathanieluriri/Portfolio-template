@@ -1,7 +1,8 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-
+import Image from "next/image";
+import { useState,useEffect } from "react";
 import {
   Speech,
   NotebookPen,
@@ -90,7 +91,8 @@ export default function About() {
 
 function AboutMeSection() {
   return <div className="flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
-    <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" />
+    {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" /> */}
+    <AboutMeImage/>
     <DropDownAbout />
     <Padding/>
   </div>;
@@ -162,3 +164,45 @@ const titles = [
 ];
 const contents =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.";
+
+
+
+
+
+
+  
+  export function AboutMeImage() {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [imageSrc, setImageSrc] = useState("/portfolio_pic_3.png");
+  
+    useEffect(() => {
+      // Set a timer for 120 seconds (120,000 ms)
+      const timer = setTimeout(() => {
+        // Change the image source after 120 seconds
+        setImageSrc("/portfolio_pic_2.png"); // Replace with your new image path
+      }, 120000);
+  
+      // Cleanup the timer when component is unmounted or if the timer finishes
+      return () => clearTimeout(timer);
+    }, []);
+  
+    return (
+      <>
+        {!isLoaded && (
+          <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" />
+        )}
+  
+        <Image
+          src={imageSrc}
+          alt="Portfolio Image"
+          width={500}
+          height={1500}
+          className={`w-full transition-all duration-1000 h-screen sm:h-[350px] md:w-full md:h-screen rounded object-contain ${
+            isLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setIsLoaded(true)}
+        />
+      </>
+    );
+  }
+  
