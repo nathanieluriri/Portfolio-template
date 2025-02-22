@@ -83,7 +83,6 @@ export default function About() {
   return (
     <>
     <AboutMeSection/>
-    <Padding/>
       <WhatCanIOfferSection />
     </>
   );
@@ -94,7 +93,6 @@ function AboutMeSection() {
     {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" /> */}
     <AboutMeImage/>
     <DropDownAbout />
-    <Padding/>
   </div>;
 }
 
@@ -173,7 +171,7 @@ const contents =
   
   export function AboutMeImage() {
     const [isLoaded, setIsLoaded] = useState(false);
-    const [imageSrc, setImageSrc] = useState("/portfolio_pic_3.png");
+    const [imageSrc, setImageSrc] = useState("/portfolio_pic_1.png");
   
     useEffect(() => {
       // Set a timer for 120 seconds (120,000 ms)

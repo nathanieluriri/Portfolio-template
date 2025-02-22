@@ -1,14 +1,21 @@
+"use client";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Padding } from "@/components/padding";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useState,useEffect } from "react";
 export default function Page() {
   return (
     <>
       <Padding />
       <Padding />
       <div className="md:w-full md:flex md:flex-row-reverse justify-center justify-self-center ">
-        <Skeleton className="md:w-3/6 transition-all duration-1000 dark:bg-zinc-900  md:h-full rounded  md:mr-11" />
+        <div className="w-screen p-4 sm:hidden"><ContactImage/>
+        </div>
+        <ContactImage className="hidden sm:block" />
+        <Padding/>
         <div className=" md:flex flex-col md:w-3/6 pl-5 ">
           <div
             
@@ -83,5 +90,42 @@ export function Message() {
         className=" disabled:cursor-not-allowed disabled:opacity-50  w-full max-w-[550px] min-h-[100px] bg-transparent rounded-md border border-input px-3 py-1 text-base shadow-sm "
       />
     </div>
+  );
+}
+
+
+
+
+
+
+export function ContactImage({className}) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const { theme } = useTheme(); // Get the current theme (light or dark)
+  const [imageSrc, setImageSrc] = useState("/contact_form_image.jpg");
+  useEffect(() => {
+    // Set image source based on theme
+    if (theme === "dark") {
+      setImageSrc("/contact_form_image.jpg"); // Dark theme image
+    } else {
+      setImageSrc("/contact_form_image_light.jpg"); // Light theme image
+    }
+  }, [theme]); // Update the image whenever the theme changes
+  return (
+    <>
+      {!isLoaded && (
+        <Skeleton className="md:w-3/6 transition-all duration-1000 dark:bg-zinc-900  md:h-full rounded  md:mr-11" />
+      )}
+
+      <Image
+        src={imageSrc}
+        alt="Contact form Image"
+        width={500}
+        height={500}
+        className={`w-full md:w-3/6 transition-all duration-1000 dark:bg-zinc-900  md:h-full rounded  md:mr-11 ${className} ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+        onLoad={() => setIsLoaded(true)}
+      />
+      </>
   );
 }
