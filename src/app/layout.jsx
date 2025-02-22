@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" class="dark" style="color-scheme: dark;">
       <body className=" dark:bg-black  transition-all duration-1000 grid">
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           <div className="flex mt-2 ml-4">
             <ThemeToggle />
