@@ -57,7 +57,7 @@ export function HeroSection() {
         {/* <Skeleton className="w-[200px] transition-all duration-1000 lg:w-[500px] dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" /> */}
         <h1 className="w-[200px]  lg:w-[500px] md:w-3/5  md:h-[50px] h-fit rounded text-5xl">Hi I'm Nathaniel</h1>
         {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-[200px] rounded" /> */}
-        <p className="w-full transition-all duration-75  md:w-4/5 md:h-[200px] h-fit rounded ">Turns out, my alma mater finally noticed my skills Thank God I was able walked away with both my first and last award In tech from University. If you're looking for a software engineer who blends innovation with excellence and a bit of comedy, you're in the right place. Again My Name Is Nathaniel Uriri And thanks for stoping by😋</p>
+        <p className="w-full transition-all duration-75  md:w-4/5 md:h-[200px] h-fit rounded ">Turns out, my alma mater finally noticed my skills Thank God I was able walk away with both my first and last award In tech from University. If you're looking for a software engineer who blends innovation with excellence and a bit of comedy, you're in the right place. Again My Name Is Nathaniel Uriri And thanks for stoping by😋</p>
       </div>
     </div>
   );
