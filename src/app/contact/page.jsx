@@ -7,6 +7,26 @@ import { Padding } from "@/components/padding";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState,useEffect } from "react";
 export default function Page() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    // Log the form field values to the console
+    console.log("First Name:", firstName);
+    console.log("Last Name:", lastName);
+    console.log("Email:", email);
+    console.log("Subject:", subject);
+    console.log("Message:", message);
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setSubject('')
+    setMessage('')
+  };
   return (
     <>
       <Padding />
@@ -32,11 +52,11 @@ export default function Page() {
               <Padding />
             </div>
             <div className="flex flex-col w-4/5 justify-center justify-self-center gap-11">
-              <NameField />
-              <EmailField />
-              <SubjectField />
-              <Message />
-              <SubmitButton />
+              <NameField firstName={firstName} lastName={lastName} setFirstName={setFirstName} setLastName={setLastName} />
+              <EmailField email={email} setEmail={setEmail} />
+              <SubjectField subject={subject} setSubject={setSubject} />
+              <Message message={message} setMessage={setMessage} />
+              <SubmitButton onClick={handleSubmit} />
               <Padding />
             </div>
           </div>
@@ -50,42 +70,47 @@ export default function Page() {
   );
 }
 
-export function SubmitButton() {
+export function SubmitButton( {onClick}) {
   return (
-    <Button className="max-w-[250px]" variant="outline">
+    <Button onClick={(e)=>onClick(e)} className="max-w-[250px]" variant="outline">
       Submit Message
     </Button>
   );
 }
 
-export function EmailField() {
-  return <Input type="email" placeholder="Email" className="max-w-[550px]" />;
+export function EmailField({ email, setEmail }) {
+  return <Input type="email" placeholder="Email" className="max-w-[550px]"       value={email}
+  onChange={(e) => setEmail(e.target.value)} />;
 }
-export function SubjectField() {
+export function SubjectField({ subject, setSubject }) {
   return (
     <Input
       name="Subject"
       type="Subject"
+      value={subject}
+      onChange={(e) => setSubject(e.target.value)}
       placeholder="Subject"
       className="max-w-[550px]"
     />
   );
 }
 
-export function NameField() {
+export function NameField({ firstName, setFirstName, lastName, setLastName }) {
   return (
     <div className="flex w-full max-w-lg items-center space-x-2">
-      <Input name="FirstName" type="FirstName" placeholder="First Name" />
-      <Input name="LastName" type="LastName" placeholder="Last Name" />
+      <Input name="FirstName" type="FirstName" placeholder="First Name"  value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+      <Input name="LastName" type="LastName" placeholder="Last Name"  value={lastName} onChange={(e) => setLastName(e.target.value)} />
     </div>
   );
 }
 
-export function Message() {
+export function Message({ message, setMessage }) {
   return (
     <div className=" ">
       <textarea
         name="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)} 
         placeholder="Type your message here..."
         className=" disabled:cursor-not-allowed disabled:opacity-50  w-full max-w-[550px] min-h-[100px] bg-transparent rounded-md border border-input px-3 py-1 text-base shadow-sm "
       />

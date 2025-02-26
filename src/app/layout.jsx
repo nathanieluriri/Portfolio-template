@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/themeButton";
-import {Navbar} from "@/components/navBar"
+import {Navbar} from "@/components/navBar";
 import { Padding } from "./page";
 import { FootMenu } from "@/components/footMenu";
 
@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "First App",
-  description: "Nat Edited",
+  title: "Nathaniel's Portfolio",
+  description: "Portfolio",
 };
 
 
