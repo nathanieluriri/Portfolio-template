@@ -1,8 +1,9 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
-import { useState } from "react";
-
+import { useState, useEffect } from 'react'
+import Link, { LinkProps } from "next/link";
+import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <>
@@ -28,24 +29,89 @@ export function TotalWorkSection() {
       </div>
       <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center  ">
         <WorkSection />
-        <WorkSection />
-        <WorkSection />
-        <WorkSection />
+
       </div>
     </>
   );
 }
 
 export function WorkSection() {
-  return (
-    <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
-      <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
-        <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
-        <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
-        <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+  const [projects, setprojects] = useState(null)
+ 
+  useEffect(() => {
+    async function fetchPosts() {
+      const res = await fetch('https://api.uriri.com.ng/v1/product-design/get/projects')
+      const data = await res.json()
+      const parsed = JSON.parse(data.projects); 
+      console.log(parsed)
+    
+      setprojects(parsed);
+    }
+    fetchPosts()
+  }, [])
+ 
+  if (!projects) 
+    return (
+      <>
+      <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
+          <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+          <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+          <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+        </div>
       </div>
-    </div>
-  );
+      <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
+          <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+          <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+          <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+        </div>
+      </div>
+      <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
+          <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+          <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+          <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+        </div>
+      </div>
+      <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
+          <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
+          <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
+          <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
+        </div>
+      </div>
+      </>
+    );
+    console.log(projects)
+    
+  return (
+    <>
+      { projects.map((project,index)=>
+
+      <div key={index} className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+      <div className="flex flex-col justify-center gap-12 p-4 dark:border-zinc-900 border-2 rounded-xl">
+        <Image
+        src={JSON.parse(project).case_study_image_link}
+        height={250}
+        width={500}
+        alt="Case Study Image"
+        />
+        <h1 className="w-3/5 transition-all duration-75 lg:w-4/5  md:w-3/5 text-4xl rounded">{JSON.parse(project).name}</h1>
+        <p className="w-full transition-all duration-100   md:w-full text-lg rounded">  {JSON.parse(project).description}</p>
+        <Button variant="outline" className="w-fit pr-12 pl-12 text-base pt-2 pb-2"> <a href={JSON.parse(project).case_study_link} target="_blank" rel="noopener noreferrer">View Case Study</a> </Button>
+        
+
+      </div>
+      </div>
+      ) }
+    </>
+
+  )
+
+
+
+
 }
 
 export function HeroSection() {
@@ -55,7 +121,7 @@ export function HeroSection() {
 
       <div className="flex gap-y-3 transition-all duration-75 flex-col justify-start">
         {/* <Skeleton className="w-[200px] transition-all duration-1000 lg:w-[500px] dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" /> */}
-        <h1 className="w-[200px]  lg:w-[500px] md:w-3/5  md:h-[50px] h-fit rounded text-5xl">Who am I? </h1>
+        <h1 className="w-[200px]  lg:w-[500px] md:w-3/5  md:h-[50px] h-fit rounded text-4xl">Who am I </h1>
         {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-[200px] rounded" /> */}
         <p className="w-full transition-all duration-75  md:w-4/5 md:h-[200px] h-fit rounded ">Hi I'm Nathaniel,  I'm A product designer/Software engineer based in Nigeria I design User Friendly Interfaces using a user centered Approach  I can help you build innovative digital products from UX research to UI design and prototyping. I specializing in creating impactful brand identities to enhance seamless user experiences.</p>
       </div>
@@ -91,3 +157,6 @@ export function PortfolioImage() {
       </>
   );
 }
+
+ 
+ 
