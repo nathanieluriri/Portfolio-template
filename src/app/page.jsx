@@ -73,7 +73,6 @@ export function WorkSection({ limit }) {
             <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
           </div>
         </div>
-
       </>
     );
   const projectsToShow = limit ? projects.slice(0, limit) : projects;
@@ -139,16 +138,15 @@ export function HeroSection() {
           research to UI design and prototyping. I specializing in creating
           impactful brand identities to enhance seamless user experiences.
         </p>
-<div className="max-w-[250px]">
-<TransitionLink href="/about" >
-          <Button className="max-w-[250px]" variant="outline">
-            Learn more
-           
-          </Button>
+        <div className="max-w-[250px]">
+          <TransitionLink href="/about">
+            <Button className="max-w-[250px]" variant="outline">
+              Learn more
+            </Button>
           </TransitionLink>
-</div>
-          <Padding/>
-          <Padding/>
+        </div>
+        <Padding />
+        <Padding />
       </div>
     </div>
   );
@@ -172,7 +170,6 @@ export function PortfolioImage() {
         alt="Portfolio Image"
         width={500}
         height={500}
-        
         className={`w-full transition-all duration-1000 h-[250px] sm:h-[350px] md:w-full md:h-[500px] rounded object-cover ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
