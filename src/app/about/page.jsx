@@ -175,21 +175,18 @@ export default function About() {
       <Padding />
       <Padding />
       <Padding />
-      <div className="h-4/5">
         <AboutMeSection />
-      </div>
+    
 
       <div className="h-screen max-h-[1000px] flex items-center justify-center justify-self-center">
         <WhatCanIOfferSection />
       </div>
 
-      <div className="h-4/5">
         <AditionalSkillsSection />
         <Padding />
       <Padding />
       <Padding />
       <Padding />
-      </div>
     </>
   );
 }
