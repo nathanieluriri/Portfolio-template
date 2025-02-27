@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
+import { Padding } from "@/components/padding";
 import { useState, useEffect } from "react";
 import {
   Speech,
@@ -85,7 +86,11 @@ export default function About() {
   return (
     <>
       <AboutMeSection />
+      <Padding/>
+      <Padding/>
       <WhatCanIOfferSection />
+      <Padding/>
+      
     </>
   );
 }
@@ -95,6 +100,7 @@ function AboutMeSection() {
     <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
       <AboutMeImage />
       <DropDownAbout />
+      
     </div>
   );
 }
