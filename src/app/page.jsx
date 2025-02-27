@@ -97,7 +97,7 @@ export function WorkSection({ limit }) {
             <h1 className="w-3/5 transition-all duration-75 lg:w-4/5  md:w-3/5 text-4xl rounded">
               {JSON.parse(project).name}
             </h1>
-            <p className="w-full transition-all duration-100   md:w-full text-lg rounded">
+            <p className="w-full transition-all duration-100   md:w-full text-sm rounded">
               {" "}
               {JSON.parse(project).description}
             </p>
