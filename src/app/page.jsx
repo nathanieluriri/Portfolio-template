@@ -139,11 +139,14 @@ export function HeroSection() {
           research to UI design and prototyping. I specializing in creating
           impactful brand identities to enhance seamless user experiences.
         </p>
-        
+<div className="max-w-[250px]">
+<TransitionLink href="/about" >
           <Button className="max-w-[250px]" variant="outline">
             Learn more
-            <TransitionLink href="/about"></TransitionLink>
+           
           </Button>
+          </TransitionLink>
+</div>
           <Padding/>
           <Padding/>
       </div>
