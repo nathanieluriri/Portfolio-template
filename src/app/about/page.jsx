@@ -29,7 +29,7 @@ import { Padding } from "../page";
 export function DropDownAbout() {
   return (
     <>
-      <div className="flex flex-col gap-5 justify-center justify-self-center h-screen">
+      <div className="flex flex-col gap-5 justify-center justify-self-center ">
         <p className="transition-all duration-100 text-lg font-bold px-1.5">
           About Me
         </p>
@@ -92,8 +92,7 @@ export default function About() {
 
 function AboutMeSection() {
   return (
-    <div className="flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
-      {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" /> */}
+    <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
       <AboutMeImage />
       <DropDownAbout />
     </div>
@@ -102,7 +101,7 @@ function AboutMeSection() {
 
 function WhatCanIOfferSection() {
   return (
-    <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col h-screen">
+    <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col">
       <Padding />
 
       <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-red-50 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-red-950 dark:text-white w-fit">
@@ -172,20 +171,17 @@ export function AboutMeImage() {
   const [imageSrc, setImageSrc] = useState("/portfolio_pic_1.png");
 
   useEffect(() => {
-    // Set a timer for 120 seconds (120,000 ms)
     const timer = setTimeout(() => {
-      // Change the image source after 120 seconds
-      setImageSrc("/portfolio_pic_2.png"); // Replace with your new image path
+      setImageSrc("/portfolio_pic_2.png");
     }, 120000);
 
-    // Cleanup the timer when component is unmounted or if the timer finishes
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
       {!isLoaded && (
-        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" />
+        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-full rounded" />
       )}
 
       <Image
@@ -193,7 +189,7 @@ export function AboutMeImage() {
         alt="Portfolio Image"
         width={500}
         height={1500}
-        className={`w-full transition-all duration-1000 h-screen sm:h-[350px] md:w-full md:h-screen rounded object-contain ${
+        className={`w-full transition-all duration-1000  sm:h-[350px] md:w-full rounded object-cover ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
         onLoad={() => setIsLoaded(true)}
