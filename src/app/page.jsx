@@ -9,33 +9,31 @@ export default function Home() {
     <>
       <HeroSection />
       <Padding />
-      <TotalWorkSection />
+      <TotalWorkSection limit={4} name={"Featured projects"} description={"Explore my portfolio to gain a comprehensive understanding of my work. Delve into detailed case studies that explain my creative process and the challenges I overcame, review the meticulously refined final designs that highlight my commitment to excellence, and interact with dynamic prototypes that bring my innovative solutions to life."} />
       <Padding />
     </>
   );
 }
 
-export function TotalWorkSection() {
+export function TotalWorkSection({description,name,limit}) {
   return (
     <>
       <div className="transition-all duration-100 w-4/5 flex justify-self-center justify-center flex-col ">
         <h1 className=" transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
-          Featured projects
+          {name}
         </h1>
         <p className="transition-all duration-100 text-sm">
-          Find out about my works: read through my case studies, have a look at
-          final designs and try out prototypes I’ve built.
+          {description}
         </p>
       </div>
       <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center  ">
-        <WorkSection />
-
+        <WorkSection limit={limit} />
       </div>
     </>
   );
 }
 
-export function WorkSection() {
+export function WorkSection({limit}) {
   const [projects, setprojects] = useState(null)
  
   useEffect(() => {
@@ -83,11 +81,12 @@ export function WorkSection() {
       </div>
       </>
     );
-    console.log(projects)
+    const projectsToShow = limit ? projects.slice(0, limit) : projects;
     
   return (
+
     <>
-      { projects.map((project,index)=>
+      { projectsToShow.map((project,index)=>
 
       <div key={index} className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
       <div className="flex flex-col justify-center gap-12 p-4 dark:border-zinc-900 border-2 rounded-xl">
@@ -95,7 +94,7 @@ export function WorkSection() {
         src={JSON.parse(project).case_study_image_link}
         height={250}
         width={500}
-        alt="Case Study Image"
+        alt="Case Study Image For ${JSON.parse(project).name}"
         />
         <h1 className="w-3/5 transition-all duration-75 lg:w-4/5  md:w-3/5 text-4xl rounded">{JSON.parse(project).name}</h1>
         <p className="w-full transition-all duration-100   md:w-full text-lg rounded">  {JSON.parse(project).description}</p>
