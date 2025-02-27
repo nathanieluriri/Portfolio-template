@@ -124,7 +124,7 @@ export function WorkSection({ limit }) {
 
 export function HeroSection() {
   return (
-    <div className=" flex max-w-[1500px] max-h-[600px] transition-all duration-75 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:h-screen lg:flex-row flex-col gap-11 justify-start">
+    <div className=" flex max-w-[1500px] md:max-h-[600px] transition-all duration-75 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:h-screen lg:flex-row flex-col gap-11 justify-start">
       <PortfolioImage />
 
       <div className="flex gap-y-3 transition-all duration-75 flex-col justify-start">
