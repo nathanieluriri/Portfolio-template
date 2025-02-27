@@ -18,7 +18,7 @@ export function Navbar() {
     }
   }, [theme]); // Update the image whenever the theme changes
   return (
-    <nav className=" max-w-[1500px] justify-self-center sticky top-0 gap-[1000px] bg-white dark:bg-black z-50 flex items-center justify-between p-4 border-b transition-all duration-75">
+    <nav className=" lg:max-w-[1500px] lg:justify-self-center sticky top-0 lg:gap-[1000px] bg-white dark:bg-black z-50 flex items-center justify-between p-4 border-b transition-all duration-75">
       {/* Left: Logo */}
       <TransitionLink
         href="/"
