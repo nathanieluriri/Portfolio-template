@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Speech,
   NotebookPen,
@@ -23,89 +23,93 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 import { Padding } from "../page";
-
 
 export function DropDownAbout() {
   return (
-
     <>
-    <div className="flex flex-col gap-5 justify-center justify-self-center h-screen">
-      <p className="transition-all duration-100 text-lg font-bold px-1.5">About Me</p>
-      
-      <h1 className="transition-all duration-100 bg-slate-100 text-black text-4xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-slate-900 dark:text-white w-fit">Evolving to create impactful experiences</h1>
-    <Accordion type="single" collapsible className="md:w-4/5 w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger className="px-1.5 transition-all duration-200">Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger className="px-1.5 transition-all duration-200">Is it styled?</AccordionTrigger>
-        <AccordionContent>
-        As a Product Designer, my background in Psychology and Education provides me with a unique perspective rooted in understanding human behavior and learning. This allows me to approach design from a user’s viewpoint like no other. My journey in Product Design has been enriched by my ability to empathize with users and discover their needs and desires through supported research. I firmly believe that effective design transcends mere aesthetics; it must also enhance the user experience, ensuring that products are not only visually appealing but also functional and intuitive. Through diverse work experiences, I’ve cultivated a distinctive blend of wisdom and professionalism, setting me apart from my peers. My commitment lies in harnessing these qualities to make a significant impact.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger className="px-1.5 transition-all duration-200">Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you prefer.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-    </div>
+      <div className="flex flex-col gap-5 justify-center justify-self-center h-screen">
+        <p className="transition-all duration-100 text-lg font-bold px-1.5">
+          About Me
+        </p>
+
+        <h1 className="transition-all duration-100 bg-slate-100 text-black text-4xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-slate-900 dark:text-white w-fit">
+          Evolving to create impactful experiences
+        </h1>
+        <Accordion type="single" collapsible className="md:w-4/5 w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="px-1.5 transition-all duration-200">
+              Is it accessible?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger className="px-1.5 transition-all duration-200">
+              Is it styled?
+            </AccordionTrigger>
+            <AccordionContent>
+              As a Product Designer, my background in Psychology and Education
+              provides me with a unique perspective rooted in understanding
+              human behavior and learning. This allows me to approach design
+              from a user’s viewpoint like no other. My journey in Product
+              Design has been enriched by my ability to empathize with users and
+              discover their needs and desires through supported research. I
+              firmly believe that effective design transcends mere aesthetics;
+              it must also enhance the user experience, ensuring that products
+              are not only visually appealing but also functional and intuitive.
+              Through diverse work experiences, I’ve cultivated a distinctive
+              blend of wisdom and professionalism, setting me apart from my
+              peers. My commitment lies in harnessing these qualities to make a
+              significant impact.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger className="px-1.5 transition-all duration-200">
+              Is it animated?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes. It's animated by default, but you can disable it if you
+              prefer.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </>
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default function About() {
   return (
     <>
-    <AboutMeSection/>
+      <AboutMeSection />
       <WhatCanIOfferSection />
     </>
   );
 }
 
 function AboutMeSection() {
-  return <div className="flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
-    {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" /> */}
-    <AboutMeImage/>
-    <DropDownAbout />
-  </div>;
+  return (
+    <div className="flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
+      {/* <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" /> */}
+      <AboutMeImage />
+      <DropDownAbout />
+    </div>
+  );
 }
 
 function WhatCanIOfferSection() {
   return (
     <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col h-screen">
-      <Padding/>
-      
+      <Padding />
+
       <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-red-50 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-red-950 dark:text-white w-fit">
         WHAT I CAN OFFER
       </h1>
       <OfferCarousel />
-      <Padding/>
+      <Padding />
     </div>
   );
 }
@@ -163,44 +167,37 @@ const titles = [
 const contents =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.";
 
+export function AboutMeImage() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState("/portfolio_pic_1.png");
 
+  useEffect(() => {
+    // Set a timer for 120 seconds (120,000 ms)
+    const timer = setTimeout(() => {
+      // Change the image source after 120 seconds
+      setImageSrc("/portfolio_pic_2.png"); // Replace with your new image path
+    }, 120000);
 
+    // Cleanup the timer when component is unmounted or if the timer finishes
+    return () => clearTimeout(timer);
+  }, []);
 
+  return (
+    <>
+      {!isLoaded && (
+        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" />
+      )}
 
-
-  
-  export function AboutMeImage() {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [imageSrc, setImageSrc] = useState("/portfolio_pic_1.png");
-  
-    useEffect(() => {
-      // Set a timer for 120 seconds (120,000 ms)
-      const timer = setTimeout(() => {
-        // Change the image source after 120 seconds
-        setImageSrc("/portfolio_pic_2.png"); // Replace with your new image path
-      }, 120000);
-  
-      // Cleanup the timer when component is unmounted or if the timer finishes
-      return () => clearTimeout(timer);
-    }, []);
-  
-    return (
-      <>
-        {!isLoaded && (
-          <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-4/5 h-screen rounded" />
-        )}
-  
-        <Image
-          src={imageSrc}
-          alt="Portfolio Image"
-          width={500}
-          height={1500}
-          className={`w-full transition-all duration-1000 h-screen sm:h-[350px] md:w-full md:h-screen rounded object-contain ${
-            isLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          onLoad={() => setIsLoaded(true)}
-        />
-      </>
-    );
-  }
-  
+      <Image
+        src={imageSrc}
+        alt="Portfolio Image"
+        width={500}
+        height={1500}
+        className={`w-full transition-all duration-1000 h-screen sm:h-[350px] md:w-full md:h-screen rounded object-contain ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+        onLoad={() => setIsLoaded(true)}
+      />
+    </>
+  );
+}

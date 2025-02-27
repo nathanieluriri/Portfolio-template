@@ -4,10 +4,7 @@ import { MobileNavBar } from "@/components/mobileNav";
 import { DesktopNav } from "@/components/desktopNav";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { useState,useEffect } from "react";
-
-
-
+import { useState, useEffect } from "react";
 
 export function Navbar() {
   const { theme } = useTheme(); // Get the current theme (light or dark)
@@ -27,12 +24,7 @@ export function Navbar() {
         href="/"
         className="text-xl font-bold dark:text-white text-black transition-all duration-75"
       >
-        <Image
-        src={imageSrc}
-        height={120}
-        width={120}
-        alt="Nav Image"
-        />
+        <Image src={imageSrc} height={120} width={120} alt="Nav Image" />
       </TransitionLink>
 
       {/* Desktop Navigation */}

@@ -3,25 +3,20 @@ import Link, { LinkProps } from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 
-function sleep(ms)  {
+function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export const TransitionLink = ({
-  children,
-  href,
-  onClicked,
-  ...props
-}) => {
+export const TransitionLink = ({ children, href, onClicked, ...props }) => {
   const router = useRouter();
 
-  const handleTransition = async (
-    e
-  ) => {
+  const handleTransition = async (e) => {
     e.preventDefault();
     const body = document.querySelector("body");
-    if (onClicked!==undefined){
-        {onClicked();}
+    if (onClicked !== undefined) {
+      {
+        onClicked();
+      }
     }
     body?.classList.add("page-transition");
 
@@ -30,9 +25,6 @@ export const TransitionLink = ({
     await sleep(0);
     router.push(href);
     await sleep(500);
-
-
-   
   };
 
   return (
