@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Padding />
+   
       <TotalWorkSection
         limit={4}
         name={"Featured projects"}
@@ -24,13 +24,13 @@ export default function Home() {
 export function TotalWorkSection({ description, name, limit }) {
   return (
     <>
-      <div className="transition-all duration-100 w-4/5 flex justify-self-center justify-center flex-col ">
+      <div className="transition-all  max-w-[1500px] duration-100 w-4/5 flex justify-self-center justify-center flex-col ">
         <h1 className=" transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
           {name}
         </h1>
-        <p className="transition-all duration-100 text-sm">{description}</p>
+        <p className="transition-all max-w-[1500px] duration-100 text-sm">{description}</p>
       </div>
-      <div className="w-4/5  flex flex-wrap gap-8 justify-center md:justify-between justify-self-center  ">
+      <div className="w-4/5 max-w-[1500px] flex flex-wrap gap-8 justify-center md:justify-between justify-self-center  ">
         <WorkSection limit={limit} />
       </div>
     </>
@@ -57,28 +57,28 @@ export function WorkSection({ limit }) {
   if (!projects)
     return (
       <>
-        <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="w-2/5 min-w-[350px]  max-w-[500px] mt-8 pr-2 pl-3">
           <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
             <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
             <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
             <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
           </div>
         </div>
-        <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="w-2/5 min-w-[350px]  max-w-[500px] mt-8 pr-2 pl-3">
           <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
             <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
             <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
             <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
           </div>
         </div>
-        <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="w-2/5 min-w-[350px]  max-w-[500px] mt-8 pr-2 pl-3">
           <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
             <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
             <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
             <Skeleton className="w-full transition-all duration-1000 h-[250px] sm:h-[300px] md:w-full md:h-[300px] rounded dark:bg-zinc-900" />
           </div>
         </div>
-        <div className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div className="w-2/5 min-w-[350px]  max-w-[500px] mt-8 pr-2 pl-3">
           <div className="flex flex-col justify-center gap-6 p-4 dark:border-zinc-900 border-2 rounded-xl">
             <Skeleton className="w-full transition-all duration-1000 h-[200px] sm:h-[250px] md:w-full md:h-[250px] rounded dark:bg-zinc-900" />
             <Skeleton className=" w-3/5 transition-all duration-1000 lg:w-4/5 dark:bg-zinc-900 md:w-3/5  h-[50px] rounded" />{" "}
@@ -92,7 +92,7 @@ export function WorkSection({ limit }) {
   return (
     <>
       {projectsToShow.map((project, index) => (
-        <div key={index} className="w-2/5 min-w-[350px] mt-8 pr-2 pl-3">
+        <div key={index} className="w-2/5 min-w-[350px] max-w-[500px] mt-8 pr-2 pl-3">
           <div className="flex flex-col justify-center gap-12 p-4 dark:border-zinc-900 border-2 rounded-xl">
             <Image
               src={JSON.parse(project).case_study_image_link}
@@ -129,7 +129,7 @@ export function WorkSection({ limit }) {
 
 export function HeroSection() {
   return (
-    <div className=" flex  transition-all duration-75 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:min-h-screen lg:flex-row flex-col gap-11 justify-start">
+    <div className=" flex max-w-[1500px] max-h-[1000px] transition-all duration-75 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:h-screen lg:flex-row flex-col gap-11 justify-start">
       <PortfolioImage />
 
       <div className="flex gap-y-3 transition-all duration-75 flex-col justify-start">

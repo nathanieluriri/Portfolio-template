@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           <div className="flex mt-2 ml-4">
             <ThemeToggle />
           </div>
-          <Padding />
+    
           {children}
           <Padding />
           <FootMenu/>
