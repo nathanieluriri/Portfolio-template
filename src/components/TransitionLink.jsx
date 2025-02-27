@@ -28,7 +28,7 @@ export const TransitionLink = ({ children, href, onClicked, ...props }) => {
   };
 
   return (
-    <Link {...props} href={href} onClick={handleTransition}>
+    <Link prefetch={true}  {...props} href={href} onClick={handleTransition}>
       {children}
     </Link>
   );
