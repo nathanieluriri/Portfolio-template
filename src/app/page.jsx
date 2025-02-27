@@ -101,19 +101,14 @@ export function WorkSection({ limit }) {
               {" "}
               {JSON.parse(project).description}
             </p>
-            <Button
-              variant="outline"
-              className="w-fit pr-12 pl-12 text-base pt-2 pb-2"
-            >
-              {" "}
-              <a
-                href={JSON.parse(project).case_study_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Case Study
-              </a>{" "}
-            </Button>
+            <TransitionLink passHref legacyBehavior href={JSON.parse(project).case_study_link}>
+              <a target="_blank">
+                <Button className="w-fit pr-12 pl-12 text-base pt-2 pb-2" variant="outline">
+                  Visit Case Study
+                </Button>
+              </a>
+            </TransitionLink>
+            
           </div>
         </div>
       ))}
@@ -139,10 +134,12 @@ export function HeroSection() {
           impactful brand identities to enhance seamless user experiences.
         </p>
         <div className="max-w-[250px]">
-          <TransitionLink href="/about">
-            <Button className="max-w-[250px]" variant="outline">
-              Learn more
-            </Button>
+          <TransitionLink passHref legacyBehavior href="/about">
+            <a target="_blank">
+              <Button className="max-w-[250px]" variant="outline">
+                Learn more
+              </Button>
+            </a>
           </TransitionLink>
         </div>
         <Padding />
