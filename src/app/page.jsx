@@ -4,6 +4,9 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { TransitionLink } from "@/components/TransitionLink";
+const apiUrl = process.env.NEXT_PUBLIC_apiUrlForProjects;
+const aboutMe=process.env.NEXT_PUBLIC_aboutme;
+console.log(`Api Url ${apiUrl}`)
 export default function Home() {
   return (
     <>
@@ -24,11 +27,11 @@ export default function Home() {
 export function TotalWorkSection({ description, name, limit }) {
   return (
     <>
-      <div className="transition-all md:pl-[10px] lg:pl-[20px] max-w-[1500px] duration-100 w-4/5 flex justify-self-center justify-center flex-col ">
+      <div className="sm:items-center md:items-start transition-all md:pl-[10px] lg:pl-[20px] max-w-[1500px] duration-100 w-4/5 flex justify-self-center justify-center flex-col ">
         <h1 className=" transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
           {name}
         </h1>
-        <p className="transition-all max-w-[1500px] duration-100 text-sm">
+        <p className="transition-all max-w-[1500px] duration-100 text-sm sm:text-center md:text-left">
           {description}
         </p>
       </div>
@@ -45,7 +48,7 @@ export function WorkSection({ limit }) {
   useEffect(() => {
     async function fetchPosts() {
       const res = await fetch(
-        "https://api.uriri.com.ng/v1/product-design/get/projects"
+        apiUrl 
       );
       const data = await res.json();
       const parsed = JSON.parse(data.projects);
@@ -86,7 +89,7 @@ export function WorkSection({ limit }) {
         >
           <div className="flex flex-col justify-center gap-12 p-4 dark:border-zinc-900 border-2 rounded-xl">
             <Image
-              src={JSON.parse(project).case_study_image_link}
+              src={(`${JSON.parse(project).case_study_image_link}`)}
               height={250}
               width={500}
               alt="Case Study Image For ${JSON.parse(project).name}"
@@ -118,20 +121,16 @@ export function WorkSection({ limit }) {
 
 export function HeroSection() {
   return (
-    <div className=" flex max-w-[1500px] md:max-h-[600px] transition-all duration-75 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:h-screen lg:flex-row flex-col gap-11 justify-start">
+    <div className=" flex max-w-[1500px] md:max-h-[600px] transition-all duration-75 md:justify-center lg:gap-x-20 w-4/5 justify-self-center lg:items-center min-h-fit md:h-screen lg:flex-row flex-col gap-11 justify-start sm:items-center md:items-start">
       <PortfolioImage />
 
-      <div className="flex gap-y-3 transition-all duration-75 flex-col justify-start">
-        <h1 className="w-[200px]  lg:w-[500px] md:w-3/5  md:h-[50px] h-fit rounded text-4xl">
+      <div className="flex gap-y-3 transition-all duration-75 flex-col justify-start sm:items-center md:items-start">
+        <h1 className="w-[200px]  lg:w-[500px] md:w-3/5  md:h-[50px] h-fit rounded text-4xl sm:text-center md:text-left">
           Who is he?
         </h1>
 
-        <p className="w-full transition-all duration-75  md:w-4/5 md:h-[200px] h-fit rounded ">
-          Hi I'm Nathaniel, I'm A product designer/Software engineer based in
-          Nigeria I design User Friendly Interfaces using a user centered
-          Approach I can help you build innovative digital products from UX
-          research to UI design and prototyping. I specializing in creating
-          impactful brand identities to enhance seamless user experiences.
+        <p className="w-full transition-all duration-75  md:w-4/5 md:h-[200px] h-fit rounded sm:text-center md:text-left">
+          {aboutMe}
         </p>
         <div className="max-w-[250px]">
           <TransitionLink passHref legacyBehavior href="/about">

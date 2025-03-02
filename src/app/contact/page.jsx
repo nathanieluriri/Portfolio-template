@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import { CircleX } from "lucide-react";
 
 import { CircleCheckBig } from "lucide-react";
-
+const apiUrlForContactForm = process.env.NEXT_PUBLIC_apiUrlForContactForm;
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -29,7 +29,7 @@ async function sendContact(
   message,
   emailAddress
 ) {
-  const url = "https://api.uriri.com.ng/v1/product-design/create/contact";
+  const url = apiUrlForContactForm;
 
   const data = {
     firstName: firstName,
@@ -148,7 +148,7 @@ export default function Page() {
         <Padding />
         <div className=" md:flex flex-col md:w-3/6 pl-5 ">
           <div className="flex flex-col md:w-full justify-center justify-self-center  self-center  items-center">
-            <div className="flex flex-col w-4/5 justify-center justify-self-center gap-2">
+            <div className="flex flex-col w-4/5 justify-center justify-self-center gap-2 sm:text-center md:text-left sm:items-center md:items-start">
               <h1 className=" transition-all duration-100 bg-zinc-100 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-zinc-900 dark:text-white w-fit">
                 Do you like coffee?
               </h1>
@@ -158,7 +158,7 @@ export default function Page() {
               </h4>
               <Padding />
             </div>
-            <div className="flex flex-col w-4/5 justify-center justify-self-center gap-11">
+            <div className="flex flex-col w-4/5 justify-center justify-self-center gap-11 sm:text-center md:text-left sm:items-center md:items-start">
               <NameField
                 firstName={firstName}
                 lastName={lastName}
@@ -301,7 +301,7 @@ export function NameField({
 
 export function Message({ message, setMessage, check }) {
   return (
-    <div className=" ">
+    <div className="w-full ">
       <textarea
         name="Message"
         value={message}
