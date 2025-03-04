@@ -78,6 +78,7 @@ async function sendMsg(
 ) {
   var res = await sendContact(firstName, lastName, subject, message, email);
   console.log(res);
+  setLoading("disabled")
   if (res == false) {
     return false;
   } else {
