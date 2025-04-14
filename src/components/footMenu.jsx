@@ -3,6 +3,7 @@ const Project2 = JSON.parse(process.env.NEXT_PUBLIC_PROJECT2);
 const Project3 = JSON.parse(process.env.NEXT_PUBLIC_PROJECT3);
 const Project4 = JSON.parse(process.env.NEXT_PUBLIC_PROJECT4);
 import { TransitionLink } from "@/components/TransitionLink";
+import Link from "next/link";
 export function FootMenu() {
   return (
     <>
