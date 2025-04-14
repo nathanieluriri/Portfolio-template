@@ -74,7 +74,8 @@ async function sendMsg(
   setLastName,
   setEmail,
   setSubject,
-  setMessage
+  setMessage,
+  setLoading
 ) {
   var res = await sendContact(firstName, lastName, subject, message, email);
   console.log(res);
@@ -87,6 +88,7 @@ async function sendMsg(
     setEmail("");
     setSubject("");
     setMessage("");
+    
   }
 }
 
@@ -113,12 +115,13 @@ export default function Page() {
       setLastName,
       setEmail,
       setSubject,
-      setMessage
+      setMessage,
+      setLoading,
     );
     if (res !== false) {
       setLoading("sent");
       await sleep(1000);
-      setLoading("notloading");
+      setLoading("disabled");
     } else {
       setLoading("notsent");
       await sleep(2000);
