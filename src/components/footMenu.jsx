@@ -15,8 +15,9 @@ export function FootMenu() {
               Seamlessly Integrating User Experiences with Impactful Brand
               Identity Design.
             </h1>
-            <p className="text-sm">Nat@uriri.com.ng</p>
-            <p className="text-sm">(234) 805 396 48 26</p>
+            <Link href="mailto:nat@uriri.com.ng?subject=Design%20Inquiry&body=Hi%20Nathaniel%2C%0D%0A%0D%0AI%20recently%20came%20across%20your%20portfolio%20and%20was%20really%20impressed%20with%20your%20work.%20I'm%20interested%20in%20working%20with%20you%20and%20would%20love%20to%20discuss%20your%20design%20services%20in%20more%20detail.%0D%0A%0D%0AThanks%20and%20looking%20forward%20to%20hearing%20from%20you!%0D%0A%0D%0ABest%2C%0D%0A%5BYour%20Name%5D"><p className="text-sm">nat@uriri.com.ng</p></Link>
+            
+            <Link href="tel:+2348053964826"><p className="text-sm">(234) 805 396 48 26</p></Link>
             <p className="text-sm">
               © All rights reserved 2025 Nathaniel Uriri
             </p>
