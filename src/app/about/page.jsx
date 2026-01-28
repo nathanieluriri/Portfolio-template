@@ -30,65 +30,47 @@ export function DropDownAbout() {
   return (
     <>
       <div className="flex flex-col gap-5 justify-center justify-self-center ">
-        <p className="transition-all duration-100 text-lg font-bold px-1.5">
-          About Me
+        <p className="transition-all duration-100 text-lg font-bold px-1.5 text-zinc-700 dark:text-zinc-200">
+          About
         </p>
 
-        <h1 className="transition-all duration-100 bg-slate-100 text-black text-4xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-slate-900 dark:text-white w-fit">
-          Evolving to create impactful experiences
+        <h1 className="transition-all duration-100 bg-slate-100 text-black text-3xl md:text-4xl font-semibold me-2 px-2.5 py-2 rounded dark:bg-slate-900 dark:text-white w-fit">
+          Product-minded engineer with a designer’s eye
         </h1>
         <Accordion type="single" collapsible className="md:w-4/5 w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Do you like stories?
+              What do you actually do?
             </AccordionTrigger>
             <AccordionContent>
-              I’ve got a good one. But long story short: I’ve been described as
-              “a creative type with his feet on the ground” and believe all
-              design abides by the same core principles. The only variable is
-              the medium. Guided by the belief that design is worthless if it
-              doesn’t function, I draw from my experiences across andriod app
-              development, ios app development, website/web app developments,
-              research skills, and my storytelling skills, to get to the root of
-              why and for whom we’re truly designing for. And then I make stuff,
-              really functional stuff.
+              I design and ship digital products end‑to‑end—turning fuzzy ideas
+              into research‑backed flows, polished interfaces, and production
+              ready builds. My strengths sit at the intersection of UI/UX,
+              mobile, and backend engineering, which lets me move fast without
+              losing craft.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Is it styled?
+              How do you approach UX?
             </AccordionTrigger>
             <AccordionContent>
-              As a Product Designer, my background in Computer Science and
-              Information Technology provides me with a unique perspective
-              rooted in understanding human computer interaction behavior and
-              learning. This allows me to approach design the way it should be
-              approached. My journey in Product Design has been enriched by my
-              ability to empathize with users and discover their needs and
-              desires through supported research and my experience as a
-              developerFF. I firmly believe that effective design transcends
-              mere aesthetics; it must also enhance the user experience,
-              ensuring that products are not only visually appealing but also
-              functional and intuitive. Through diverse work experiences, I’ve
-              cultivated a distinctive blend of wisdom and professionalism,
-              setting me apart from my peers. My commitment lies in harnessing
-              these qualities to make a significant impact.
+              I start with the problem, not the pixels. I map the user journey,
+              validate assumptions with quick research, and iterate on
+              structure, clarity, and hierarchy. Visual design comes last—
+              once the experience is solid, I refine the UI to feel intentional
+              and trustworthy.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Is it animated?
+              Why combine design + engineering?
             </AccordionTrigger>
             <AccordionContent>
-              Yes, it's animated! But if you prefer something more static,
-              that's totally fine too. While animation can really bring designs
-              to life (and make developers break a sweat), tools like Rive,
-              Jitter, and Spline have made it much easier to add that extra
-              flair. But hey, I get it sometimes a clean, simple design is just
-              what you need. After all, a user isn’t just the consumer, the user
-              is the stakeholder too! And I will always make sure that the
-              stakeholder's, employer's, contractor's opinion and taste will
-              shine through my design choices
+              It keeps teams aligned and outcomes consistent. I can design
+              realistic experiences, build the first version, and speak both
+              product and engineering. That reduces handoff friction and speeds
+              up delivery.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -101,65 +83,42 @@ export function AdditionalSkillDropDown() {
   return (
     <>
       <div className="flex flex-col gap-5 justify-center justify-self-center ">
-        <p className="transition-all duration-100 text-lg font-bold px-1.5">
-          Additional Skills
+        <p className="transition-all duration-100 text-lg font-bold px-1.5 text-zinc-700 dark:text-zinc-200">
+          Capabilities
         </p>
 
-        <h1 className="transition-all duration-100 bg-green-100 text-black text-4xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-green-900 dark:text-white w-fit">
-          Evolving to create impactful experiences
+        <h1 className="transition-all duration-100 bg-green-100 text-black text-3xl md:text-4xl font-semibold me-2 px-2.5 py-2 rounded dark:bg-green-900 dark:text-white w-fit">
+          UI/UX + Engineering Toolkit
         </h1>
         <Accordion type="single" collapsible className="md:w-4/5 w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Do you like stories?
+              UX & product design
             </AccordionTrigger>
             <AccordionContent>
-              I’ve got a good one. But long story short: I’ve been described as
-              “a creative type with his feet on the ground” and believe all
-              design abides by the same core principles. The only variable is
-              the medium. Guided by the belief that design is worthless if it
-              doesn’t function, I draw from my experiences across andriod app
-              development, ios app development, website/web app developments,
-              research skills, and my storytelling skills, to get to the root of
-              why and for whom we’re truly designing for. And then I make stuff,
-              really functional stuff.
+              Research, user flows, wireframes, prototypes, and UI systems. I
+              design for clarity, conversion, and accessibility, then validate
+              with real feedback before polishing the final visuals.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Is it styled?
+              Frontend & mobile
             </AccordionTrigger>
             <AccordionContent>
-              As a Product Designer, my background in Computer Science and
-              Information Technology provides me with a unique perspective
-              rooted in understanding human computer interaction behavior and
-              learning. This allows me to approach design the way it should be
-              approached. My journey in Product Design has been enriched by my
-              ability to empathize with users and discover their needs and
-              desires through supported research and my experience as a
-              developerFF. I firmly believe that effective design transcends
-              mere aesthetics; it must also enhance the user experience,
-              ensuring that products are not only visually appealing but also
-              functional and intuitive. Through diverse work experiences, I’ve
-              cultivated a distinctive blend of wisdom and professionalism,
-              setting me apart from my peers. My commitment lies in harnessing
-              these qualities to make a significant impact.
+              Flutter and React (Next.js) for responsive, high‑performance
+              experiences. I focus on smooth interactions, clean component
+              structure, and maintainable design tokens.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Is it animated?
+              Backend & infrastructure
             </AccordionTrigger>
             <AccordionContent>
-              Yes, it's animated! But if you prefer something more static,
-              that's totally fine too. While animation can really bring designs
-              to life (and make developers break a sweat), tools like Rive,
-              Jitter, and Spline have made it much easier to add that extra
-              flair. But hey, I get it sometimes a clean, simple design is just
-              what you need. After all, a user isn’t just the consumer, the user
-              is the stakeholder too! And I will always make sure that the
-              stakeholder's, employer's, contractor's opinion and taste will
-              shine through my design choices
+              FastAPI, Docker, Nginx, CI/CD, and deployment workflows that keep
+              products stable and scalable. I enjoy building the system beneath
+              the experience.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -173,12 +132,11 @@ export default function About() {
     <>
       <div className="hidden md:block pt-[55px]"></div>
       <AboutMeSection />
-      <div className="hidden md:block pt-[100px]" ></div>
-      <div className="h-screen max-h-[600px] flex items-center justify-center justify-self-center">
-        <WhatCanIOfferSection />
-      </div>
-      <div className="hidden md:block pt-[100px]"></div>
-
+      <div className="hidden md:block pt-[80px]"></div>
+      <ResumeSection />
+      <div className="hidden md:block pt-[80px]"></div>
+      <WhatCanIOfferSection />
+      <div className="hidden md:block pt-[80px]"></div>
       <AditionalSkillsSection />
       <Padding />
       <Padding />
@@ -190,7 +148,7 @@ export default function About() {
 
 function AboutMeSection() {
   return (
-    <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
+    <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300 motion-safe:animate-fade-up">
       <AboutMeImage />
       <DropDownAbout />
     </div>
@@ -199,7 +157,7 @@ function AboutMeSection() {
 
 function AditionalSkillsSection() {
   return (
-    <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300">
+    <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300 motion-safe:animate-fade-up">
       <AditionalSkillImage />
       <AdditionalSkillDropDown />
     </div>
@@ -208,15 +166,140 @@ function AditionalSkillsSection() {
 
 function WhatCanIOfferSection() {
   return (
-    <div className="flex lg:w-fit lg:max-w-[1000px]   justify-center justify-self-center flex-col">
+    <div className="flex lg:w-fit lg:max-w-[1000px] justify-center justify-self-center flex-col">
       <Padding />
 
-      <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-red-50 text-black text-xl font-medium me-2 px-1.5 py-1.5 rounded dark:bg-red-950 dark:text-white w-fit">
+      <h1 className="ml-7 sm:m-0 transition-all duration-100 bg-red-50 text-black text-xl font-medium me-2 px-2.5 py-2 rounded dark:bg-red-950 dark:text-white w-fit">
         WHAT I CAN OFFER
       </h1>
+      <p className="mt-3 mb-2 text-sm text-zinc-600 dark:text-zinc-300 max-w-[700px]">
+        From discovery to delivery, I bring product thinking, polished UI, and
+        developer‑friendly execution that helps teams ship faster and smarter.
+      </p>
       <OfferCarousel />
       <Padding />
     </div>
+  );
+}
+
+function ResumeSection() {
+  return (
+    <section className="relative w-4/5 max-w-[1100px] justify-self-center">
+      <div className="absolute -top-16 -right-10 h-44 w-44 rounded-full bg-gradient-to-br from-amber-200/40 via-orange-300/20 to-transparent blur-3xl motion-safe:animate-float-slow" />
+      <div className="absolute -bottom-20 -left-12 h-48 w-48 rounded-full bg-gradient-to-br from-sky-200/30 via-indigo-300/10 to-transparent blur-3xl motion-safe:animate-pulse-soft" />
+
+      <div className="relative flex flex-col gap-10">
+        <div className="flex flex-col gap-4 motion-safe:animate-fade-up">
+          <p className="text-xs tracking-[0.35em] text-zinc-500 uppercase">
+            Resume Snapshot
+          </p>
+          <h2 className="text-3xl md:text-5xl font-semibold">
+            Nathaniel Elo‑Oghene Uriri
+          </h2>
+          <p className="text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl">
+            Head of Product & Innovation and multi‑disciplinary builder focused
+            on human‑centered product design, mobile apps, and scalable backend
+            systems. I create confident user experiences and ship them end‑to‑end.
+          </p>
+          <p className="text-sm text-zinc-500">
+            nat@uriri.com.ng · +234 (805)-396-4826 · LinkedIn: Nathaniel Uriri ·
+            GitHub: nathanieluriri
+          </p>
+          <div className="flex flex-wrap gap-2 text-xs md:text-sm text-zinc-700 dark:text-zinc-200">
+            {[
+              "UI/UX & Product Design",
+              "Flutter & Next.js",
+              "FastAPI & DevOps",
+              "Abuja, Nigeria",
+            ].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-zinc-200/70 bg-white/70 px-3 py-1 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/60"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {experience.map((role, index) => (
+            <Card
+              key={`${role.company}-${role.title}`}
+              className="group border-zinc-200/70 bg-white/70 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-950/50 motion-safe:animate-fade-up"
+              style={{ animationDelay: `${index * 80}ms` }}
+            >
+              <CardContent className="flex flex-col gap-3 pt-6">
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm text-zinc-500">{role.period}</p>
+                  <h3 className="text-xl font-semibold">{role.title}</h3>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-300">
+                    {role.company} · {role.location}
+                  </p>
+                </div>
+                <ul className="list-disc pl-4 text-sm text-zinc-600 dark:text-zinc-300 space-y-1">
+                  {role.highlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          <Card className="border-zinc-200/70 bg-white/70 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/40 motion-safe:animate-fade-up">
+            <CardContent className="pt-6 flex flex-col gap-3">
+              <h3 className="text-lg font-semibold">Projects</h3>
+              <div className="space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
+                {projects.map((project) => (
+                  <div key={project.name} className="space-y-1">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-100">
+                      {project.name}
+                    </p>
+                    <p>{project.summary}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="border-zinc-200/70 bg-white/70 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/40 motion-safe:animate-fade-up">
+            <CardContent className="pt-6 flex flex-col gap-3">
+              <h3 className="text-lg font-semibold">Education & Awards</h3>
+              <div className="space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
+                <div>
+                  <p className="font-medium text-zinc-800 dark:text-zinc-100">
+                    {education.school}
+                  </p>
+                  <p>{education.degree}</p>
+                  <p>{education.details}</p>
+                </div>
+                <div className="space-y-1">
+                  {awards.map((award) => (
+                    <p key={award}>{award}</p>
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="border-zinc-200/70 bg-white/70 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/40 motion-safe:animate-fade-up">
+            <CardContent className="pt-6 flex flex-col gap-3">
+              <h3 className="text-lg font-semibold">Skills & Tools</h3>
+              <div className="space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
+                {skills.map((group) => (
+                  <div key={group.label} className="space-y-1">
+                    <p className="font-medium text-zinc-800 dark:text-zinc-100">
+                      {group.label}
+                    </p>
+                    <p>{group.items}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -226,23 +309,23 @@ export function OfferCarousel() {
       opts={{
         align: "start",
       }}
-      className="w-[250px] md:w-full md:max-w-fit p-3"
+      className="w-[250px] md:w-full md:max-w-fit p-3 motion-safe:animate-fade-up"
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: 6 }).map((_, index) => (
           <CarouselItem
             key={index}
             className=" md:basis-2/6 basis-[100%] w-[100px] md:w-full"
           >
-            <Card>
-              <CardContent className="pr-4 flex items-center justify-center sm:items-start sm:justify-start flex-col pt-2 min-h-[300px] gap-2 ">
+            <Card className="group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-zinc-900/40">
+              <CardContent className="pr-4 flex items-center justify-center sm:items-start sm:justify-start flex-col pt-2 min-h-[300px] gap-3">
                 {icons[index]}
-                <h1 className="text-xl md:text-3xl text-center sm:text-start">
+                <h1 className="text-xl md:text-3xl text-center sm:text-start font-semibold">
                   {titles[index]}
                 </h1>
-                <h1 className="md:max-w-[250px] max-w-[150px]  sm:text-start text-center text-sm">
-                  {contents}
-                </h1>
+                <p className="md:max-w-[250px] max-w-[150px] sm:text-start text-center text-sm text-zinc-600 dark:text-zinc-300">
+                  {contents[index]}
+                </p>
               </CardContent>
             </Card>
           </CarouselItem>
@@ -270,8 +353,129 @@ const titles = [
   "AI Centered Applications",
   "Mobile & Web Apps",
 ];
-const contents =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.";
+const contents = [
+  "Clear documentation, fast feedback loops, and cross‑team alignment from kickoff to launch.",
+  "Journey mapping, surveys, usability tests, and rapid validation before high‑fidelity UI.",
+  "Design systems, typography, and visual hierarchy that make interfaces feel premium.",
+  "Realistic UI specs that translate cleanly into production code and reusable components.",
+  "Practical ML integrations that improve workflow speed, search, or personalization.",
+  "Flutter and Next.js builds that feel native, responsive, and performance‑minded.",
+];
+
+const experience = [
+  {
+    title: "Head of Product & Innovation",
+    company: "Digital Guardians",
+    location: "Abuja, Nigeria",
+    period: "May 2025 – Present",
+    highlights: [
+      "Led secure deployment for a government web platform in Kogi State.",
+      "Configured Nginx reverse proxy and containerized services with Docker Compose.",
+      "Maintained high uptime through proactive monitoring and optimization.",
+    ],
+  },
+  {
+    title: "Lead Mobile Developer & Product Designer",
+    company: "Streamz",
+    location: "Abuja, Nigeria",
+    period: "Jan 2024 – Present",
+    highlights: [
+      "Designed dating app MVP in Figma within two weeks.",
+      "Built core FastAPI endpoints and Flutter mobile UI.",
+      "Delivered a Next.js admin dashboard for operations.",
+    ],
+  },
+  {
+    title: "Lead Backend Engineer",
+    company: "Crayonics",
+    location: "Abuja, Nigeria",
+    period: "Mar 2024 – Apr 2024",
+    highlights: [
+      "Implemented auth and resume parsing APIs in FastAPI.",
+      "Built gamification features: points, streaks, and leaderboards.",
+      "Shipped an internal Flutter admin tool for analytics and feedback.",
+    ],
+  },
+  {
+    title: "Backend Developer Intern",
+    company: "3ni’s Kitchen",
+    location: "Abuja, Nigeria",
+    period: "Mar 2024 – Jul 2024",
+    highlights: [
+      "Created a real‑time recommendation engine using Firebase.",
+      "Integrated Paystack in a Flutter web app for payments.",
+    ],
+  },
+  {
+    title: "Lead Web Developer",
+    company: "247DoorDeliveryLimited",
+    location: "Remote · London, UK",
+    period: "Dec 2023 – Present",
+    highlights: [
+      "Optimized CMS workflows and security, improving traffic by 25%.",
+      "Built a Flutter web app with FastAPI + MongoDB to reduce booking friction.",
+      "Delivered an admin mobile app with push alerts and live tracking.",
+    ],
+  },
+];
+
+const projects = [
+  {
+    name: "Doux Landing Page",
+    summary:
+      "Collaborated on a crypto spending product site with refined UI/UX, hierarchy, and prototypes.",
+  },
+  {
+    name: "BMT Library WiFi Management",
+    summary:
+      "Designed and deployed a hotspot system with OpenWRT and captive portal testing.",
+  },
+  {
+    name: "Customer Maintenance Tracking System",
+    summary:
+      "Fine‑tuned T5 transformer models for maintenance automation, improving efficiency by 86.3%.",
+  },
+  {
+    name: "Sign Language Translator",
+    summary:
+      "Built a TensorFlow LSTM pipeline with Streamlit and WebRTC for real‑time translation.",
+  },
+  {
+    name: "R.A.G Study Bot",
+    summary:
+      "Created a retrieval‑augmented study assistant that improved user outcomes by 36.7%.",
+  },
+];
+
+const education = {
+  school: "Veritas University, Abuja",
+  degree: "B.Sc. Computer Science · Second Class Upper",
+  details: "Graduated August 2024 · GPA 4.36/5.00",
+};
+
+const awards = [
+  "Veritas Tech Innovator of the Year (400L)",
+  "PCAP™ – Certified Associate Python Programmer",
+  "Cisco CyberOps Associate",
+  "Figma UI/UX Design Essentials (Udemy)",
+  "Complete Flutter Guide 2025 (Udemy)",
+  "Python Network Programming – TCP/IP Socket Programming (Udemy)",
+];
+
+const skills = [
+  {
+    label: "Product & UX",
+    items: "Figma, UI systems, prototyping, UX research, interaction design",
+  },
+  {
+    label: "Engineering",
+    items: "Flutter (Dart), Python, FastAPI, JavaScript, Next.js, React",
+  },
+  {
+    label: "Infrastructure & Tools",
+    items: "Docker, Nginx, CI/CD, Linux, MongoDB, Firebase, Vercel",
+  },
+];
 
 export function AboutMeImage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -288,7 +492,7 @@ export function AboutMeImage() {
   return (
     <>
       {!isLoaded && (
-        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-full rounded" />
+        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-full rounded-2xl" />
       )}
 
       <Image
@@ -296,7 +500,7 @@ export function AboutMeImage() {
         alt="Portfolio Image"
         width={500}
         height={1500}
-        className={`w-full transition-all duration-1000  sm:h-[350px] md:w-full rounded object-cover ${
+        className={`w-full transition-all duration-1000 motion-safe:animate-fade-in sm:h-[350px] md:w-full rounded-2xl object-cover shadow-2xl shadow-black/10 dark:shadow-black/40 ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
         onLoad={() => setIsLoaded(true)}
@@ -315,7 +519,7 @@ export function AditionalSkillImage() {
   return (
     <>
       {!isaditionalLoaded && (
-        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-full rounded" />
+        <Skeleton className="w-full transition-all duration-1000 dark:bg-zinc-900 md:w-full rounded-2xl" />
       )}
 
       <Image
@@ -323,7 +527,7 @@ export function AditionalSkillImage() {
         alt="Aditional Skills Image"
         width={500}
         height={1500}
-        className={`w-full transition-all duration-1000  sm:h-[350px] md:w-full rounded object-cover ${
+        className={`w-full transition-all duration-1000 motion-safe:animate-fade-in sm:h-[350px] md:w-full rounded-2xl object-cover shadow-2xl shadow-black/10 dark:shadow-black/40 ${
           isaditionalLoaded ? "opacity-100" : "opacity-0"
         }`}
         onLoad={() => setIsaditional(true)}
