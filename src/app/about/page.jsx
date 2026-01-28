@@ -26,58 +26,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export function DropDownAbout() {
-  return (
-    <>
-      <div className="flex flex-col gap-5 justify-center justify-self-center ">
-        <p className="transition-all duration-100 text-lg font-bold px-1.5 text-zinc-700 dark:text-zinc-200">
-          About
-        </p>
 
-        <h1 className="transition-all duration-100 bg-slate-100 text-black text-3xl md:text-4xl font-semibold me-2 px-2.5 py-2 rounded dark:bg-slate-900 dark:text-white w-fit">
-          Product-minded engineer with a designer’s eye
-        </h1>
-        <Accordion type="single" collapsible className="md:w-4/5 w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="px-1.5 transition-all duration-200">
-              What do you actually do?
-            </AccordionTrigger>
-            <AccordionContent>
-              I design and ship digital products end‑to‑end—turning fuzzy ideas
-              into research‑backed flows, polished interfaces, and production
-              ready builds. My strengths sit at the intersection of UI/UX,
-              mobile, and backend engineering, which lets me move fast without
-              losing craft.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="px-1.5 transition-all duration-200">
-              How do you approach UX?
-            </AccordionTrigger>
-            <AccordionContent>
-              I start with the problem, not the pixels. I map the user journey,
-              validate assumptions with quick research, and iterate on
-              structure, clarity, and hierarchy. Visual design comes last—
-              once the experience is solid, I refine the UI to feel intentional
-              and trustworthy.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="px-1.5 transition-all duration-200">
-              Why combine design + engineering?
-            </AccordionTrigger>
-            <AccordionContent>
-              It keeps teams aligned and outcomes consistent. I can design
-              realistic experiences, build the first version, and speak both
-              product and engineering. That reduces handoff friction and speeds
-              up delivery.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
-    </>
-  );
-}
 
 export function AdditionalSkillDropDown() {
   return (
@@ -130,8 +79,6 @@ export function AdditionalSkillDropDown() {
 export default function About() {
   return (
     <>
-      <div className="hidden md:block pt-[55px]"></div>
-      <AboutMeSection />
       <div className="hidden md:block pt-[80px]"></div>
       <ResumeSection />
       <div className="hidden md:block pt-[80px]"></div>
@@ -146,14 +93,7 @@ export default function About() {
   );
 }
 
-function AboutMeSection() {
-  return (
-    <div className="max-w-[1000px] flex flex-col md:flex-row gap-10 w-4/5 justify-center justify-self-center transition-all duration-300 motion-safe:animate-fade-up">
-      <AboutMeImage />
-      <DropDownAbout />
-    </div>
-  );
-}
+
 
 function AditionalSkillsSection() {
   return (
